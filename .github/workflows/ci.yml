@@ -1,0 +1,23 @@
+name: Validacao do Codigo
+
+on: [push, pull_request]
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Instalar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+          
+      - name: Instalar pytest
+        run: pip install -r requirements.txt
+        
+      - name: Analise Estatica (Nativa do Python, sem flake8)
+        run: python -m py_compile despensa.py test_despensa.py
+        
+      - name: Rodar os testes automatizados
+        run: pytest test_despensa.py
