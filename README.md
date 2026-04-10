@@ -5,7 +5,7 @@ Uma aplicação feita em **Python Puro**, utilizando apenas arquivos `.txt` para
 ## Como testar no seu computador
 
 1. Faça o clone do projeto:
-   `git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git`
+   `git clone https://github.com/MiguelMarqz/despesa-consciente.git`
 2. Instale a ferramenta de teste:
    `pip install -r requirements.txt`
 3. Rode o programa:
